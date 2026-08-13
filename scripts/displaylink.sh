@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-sudo apt update -y && sudo apt upgrade -y
+if [[ "${SETUP}" != "1" ]]; then
+    sudo apt update -y && sudo apt upgrade -y
+fi
+
 BASE_URL="https://www.synaptics.com"
 DOWNLOADS_URL="${BASE_URL}/products/displaylink-graphics/downloads/ubuntu"
 DRIVER=$(curl -fsSl "${DOWNLOADS_URL}" | grep -A20 'Latest Official Driver' | grep -oP '<a href="\K[^"]+(?="[^>]*class="download-link")')

@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-sudo apt update
-sudo apt upgrade -y
+if [[ "${SETUP}" != "1" ]]; then
+    sudo apt update
+    sudo apt upgrade -y
+fi
+
 sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst cpu-checker virt-manager
 
 sudo usermod -aG libvirt $(whoami)

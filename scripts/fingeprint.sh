@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "Installing fingerprint support..."
+if [[ "${SETUP}" != "1" ]]; then
+    sudo apt update -y
+fi
 
-sudo apt update -y
+echo "Installing fingerprint support..."
 sudo apt install -y fprintd libpam-fprintd
 
 echo "Enabling fingerprint authentication..."
