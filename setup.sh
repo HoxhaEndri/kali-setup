@@ -6,6 +6,7 @@ export SETUP=1
 echo "[+] Updating the system..."
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt full-upgrade -y
 
 echo "[+] Executing scripts..."
 
