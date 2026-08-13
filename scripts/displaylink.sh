@@ -81,3 +81,4 @@ sudo bash /tmp/displaylink/displaylink-driver-*.run --accept
 sudo rm -r /tmp/displaylink
 sudo rm /tmp/driver.zip
 echo "Displaylink script finished."
+echo "REBOOT NEEDED FOR THE DRIVER!!!"
