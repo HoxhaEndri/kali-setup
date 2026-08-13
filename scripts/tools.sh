@@ -82,3 +82,8 @@ if ! command -v prowler >/dev/null 2>&1; then
     pipx install prowler
 fi
 
+if ! command -v bloodhound >/dev/null 2>&1; then
+    sudo apt install -y bloodhound
+    sudo bloodhound-setup
+fi
+
