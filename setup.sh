@@ -8,6 +8,8 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt full-upgrade -y
 
+sudo systemctl enable bluetooth.service
+
 echo "[+] Executing scripts..."
 
 for script in ./scripts/*.sh; do
