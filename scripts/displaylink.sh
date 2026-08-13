@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ "${SETUP}" != "1" ]]; then
+if [[ "${SETUP:-}" != "1" ]]; then
     sudo apt update -y && sudo apt upgrade -y
 fi
 
