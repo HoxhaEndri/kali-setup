@@ -16,6 +16,10 @@ if ! command -v pipx >/dev/null 2>&1; then
         sudo apt install -y pipx
 fi
 
+if [ ! -d Inveigh ]; then
+    git clone git@github.com:Kevin-Robertson/Inveigh.git
+fi
+
 if [ ! -d PowerSploit ]; then
     git clone git@github.com:PowerShellMafia/PowerSploit.git
 fi
