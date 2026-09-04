@@ -17,27 +17,27 @@ if ! command -v pipx >/dev/null 2>&1; then
 fi
 
 if [ ! -d Inveigh ]; then
-    git clone git@github.com:Kevin-Robertson/Inveigh.git
+    git clone https://github.com/Kevin-Robertson/Inveigh.git
 fi
 
 if [ ! -d PowerSploit ]; then
-    git clone git@github.com:PowerShellMafia/PowerSploit.git
+    git clone https://github.com/PowerShellMafia/PowerSploit.git
 fi
 
 if [ ! -d GraphRunner ]; then
-    git clone git@github.com:dafthack/GraphRunner.git
+    git clone https://github.com/dafthack/GraphRunner.git
 fi
 
 if [ ! -d AADInternals ]; then
-    git clone git@github.com:Gerenios/AADInternals.git
+    git clone https://github.com/Gerenios/AADInternals.git
 fi
 
 if [ ! -d MicroBurst ]; then
-    git clone git@github.com:NetSPI/MicroBurst.git
+    git clone https://github.com/NetSPI/MicroBurst.git
 fi
 
 if [ ! -d ScoutSuite ]; then
-    git clone https://github.com/nccgroup/ScoutSuite
+    git clone https://github.com/nccgroup/ScoutSuite.git
     cd ScoutSuite
     virtualenv -p python3 venv
     source venv/bin/activate
@@ -46,12 +46,12 @@ if [ ! -d ScoutSuite ]; then
 fi
 
 if [ ! -d MFASweep ]; then
-    git clone git@github.com:dafthack/MFASweep.git
+    git clone https://github.com/dafthack/MFASweep.git
     (cd MFASweep && pip install -r requirements.txt --break-system-packages)
 fi
 
 if [ ! -d TokenTacticsV2 ]; then
-    git clone git@github.com:f-bader/TokenTacticsV2.git
+    git clone https://github.com/f-bader/TokenTacticsV2.git
 fi
 
 if ! command -v roadrecon >/dev/null 2>&1; then
