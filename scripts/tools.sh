@@ -87,7 +87,7 @@ if ! command -v prowler >/dev/null 2>&1; then
 fi
 
 if ! command -v bloodhound >/dev/null 2>&1; then
-    sudo apt install -y bloodhound
+    sudo apt install -y bloodhound bloodhound-ce-python
     sudo bloodhound-setup
 fi
 
