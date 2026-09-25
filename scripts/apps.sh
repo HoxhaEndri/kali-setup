@@ -9,4 +9,7 @@ if [[ "${SETUP:-}" != "1" ]]; then
 fi
 
 sudo apt install -y $(xargs < "${PROJECT_DIR}/packages/pentest.txt")
-curl https://getcroc.com | bash
+
+if [ ! -x /usr/local/bin/croc ]; then
+    curl https://getcroc.com | bash
+fi
