@@ -13,3 +13,4 @@ echo "Enabling fingerprint authentication..."
 # supported devices: https://fprint.freedesktop.org/supported-devices.html
 sudo pam-auth-update --enable fprintd
 echo "Fingerprint PAM configuration complete."
+# sudo pam-auth-update --package --disable kde-kwallet
