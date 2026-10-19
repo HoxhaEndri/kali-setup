@@ -38,11 +38,7 @@ fi
 
 if [ ! -d ScoutSuite ]; then
     git clone https://github.com/nccgroup/ScoutSuite.git
-    cd ScoutSuite
-    virtualenv -p python3 venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    python scout.py --help
+    ( cd ScoutSuite && virtualenv -p python3 venv && source venv/bin/activate && pip install -r requirements.txt --break-system-packages && python scout.py --help )
 fi
 
 if [ ! -d MFASweep ]; then
