@@ -76,8 +76,9 @@ echo "Downloading driver archive..."
 curl -fsL -o /tmp/driver.zip "${ARCHIVE_URL}"
 echo "Driver archive downloaded."
 unzip /tmp/driver.zip -d /tmp/displaylink
-sudo chmod +x /tmp/displaylink/displaylink-driver-*.run
-sudo bash /tmp/displaylink/displaylink-driver-*.run --accept
+sudo chmod +x /tmp/displaylink/*/displaylink-driver-*.run
+# accept not working automatically
+sudo bash /tmp/displaylink/*/displaylink-driver-*.run --accept
 sudo rm -r /tmp/displaylink
 sudo rm /tmp/driver.zip
 echo "Displaylink script finished."
