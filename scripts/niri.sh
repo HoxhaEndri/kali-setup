@@ -14,4 +14,4 @@ if ! command -v xwayland-satellite >/dev/null 2>&1; then
     ( cd ~/xwayland-satellite && cargo deb && sudo apt install ./target/debian/xwayland-satellite_*_amd64.deb )
 fi
 
-sudo apt update -y && sudo apt install alacritty swaylock kanshi fonts-font-awesome xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring -y #mako, waybar, swayidle, swaybg, pavucontrol, wl-clipboard, brightnessctl, grim/slurp, nwg-drawer, nwg-panel, nwg-displays
+sudo apt update -y && sudo apt install alacritty swaylock kanshi fonts-font-awesome xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring polkit-kde-agent-1 wl-mirror wl-clipboard -y #mako, waybar, swayidle, swaybg, pavucontrol, brightnessctl, grim/slurp, nwg-drawer, nwg-panel, nwg-displays
