@@ -34,6 +34,6 @@ if [ ! -d "$HOME/.config/kanshi" ]; then
     rm -rf "$HOME/dotfiles"
     systemctl --user add-wants niri.service swayidle.service
     systemctl --user add-wants niri.service waybar.service
+    systemctl --user daemon-reload && systemctl --user enable --now safeeyes.service
 fi
-
 
