@@ -19,7 +19,7 @@ if ! command -v xwayland-satellite >/dev/null 2>&1; then
     sudo rm -r "$HOME/xwayland-satellite"
 fi
 
-sudo apt update -y && sudo apt install alacritty swaylock swayidle kanshi fonts-font-awesome xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring polkit-kde-agent-1 wl-mirror wl-clipboard -y #mako, waybar, swaybg, pavucontrol, brightnessctl, grim/slurp, nwg-drawer, nwg-panel, nwg-displays
+sudo apt update -y && sudo apt install alacritty swaylock swayidle waybar kanshi fonts-font-awesome xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring polkit-kde-agent-1 wl-mirror wl-clipboard -y #mako, swaybg, pavucontrol, brightnessctl, grim/slurp, nwg-drawer, nwg-panel, nwg-displays
 
 
 if [ ! -d "$HOME/.config/kanshi" ]; then
@@ -33,6 +33,7 @@ if [ ! -d "$HOME/.config/kanshi" ]; then
     done
     rm -rf "$HOME/dotfiles"
     systemctl --user add-wants niri.service swayidle.service
+    systemctl --user add-wants niri.service waybar.service
 fi
 
 
